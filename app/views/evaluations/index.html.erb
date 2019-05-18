@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= t('activerecord.models.evaluations') %></h1>
+
+<%= form_tag(evaluations_path, method: "get") do %>
+  <%= label_tag(:search, "Buscar pelo nome:") %>
+  <%= text_field_tag(:search, params[:search]) %>
+  <%= submit_tag("Buscar") %>
+<% end %>
+
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th><%= t('activerecord.attributes.evaluation.note1') %></th>
+      <th><%= t('activerecord.attributes.evaluation.note2') %></th>
+      <th><%= t('activerecord.attributes.evaluation.note3') %></th>
+      <th><%= t('activerecord.attributes.evaluation.note4') %></th>
+      <th><%= t('activerecord.attributes.evaluation.student_id') %></th>
+      <th><%= t('activerecord.attributes.evaluation.discipline_id') %></th>
+      <th><%= t('activerecord.attributes.evaluation.average') %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @evaluations.each do |evaluation| %>
+      <tr>
+        <td><%= evaluation.note1 %></td>
+        <td><%= evaluation.note2 %></td>
+        <td><%= evaluation.note3 %></td>
+        <td><%= evaluation.note4 %></td>
+        <td><%= evaluation.student.name %></td>
+        <td><%= evaluation.discipline.name %></td>
+        <td><%= evaluation.average %></td>
+        <td><%= link_to t('activerecord.show'), evaluation, class: "btn btn-info" %></td>
+        <td><%= link_to t('activerecord.edit'), edit_evaluation_path(evaluation), class: "btn btn-success" %></td>
+        <td><%= link_to t('activerecord.destroy'), evaluation, class: "btn btn-danger", method: :delete, data: { confirm: t('activerecord.question') } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t('activerecord.evaluation.new_evaluation'), new_evaluation_path %>

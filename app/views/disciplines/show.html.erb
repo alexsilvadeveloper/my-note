@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= t('activerecord.attributes.discipline.name') %>:</strong>
+  <%= @discipline.name %>
+</p>
+
+<%= link_to t('activerecord.edit'), edit_discipline_path(@discipline) %> |
+<%= link_to t('activerecord.back'), disciplines_path %>

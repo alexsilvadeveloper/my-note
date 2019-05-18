@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= t('activerecord.attributes.evaluation.note1') %>:</strong>
+  <%= @evaluation.note1 %>
+</p>
+
+<p>
+  <strong><%= t('activerecord.attributes.evaluation.note2') %>:</strong>
+  <%= @evaluation.note2 %>
+</p>
+
+<p>
+  <strong><%= t('activerecord.attributes.evaluation.note3') %>:</strong>
+  <%= @evaluation.note3 %>
+</p>
+
+<p>
+  <strong><%= t('activerecord.attributes.evaluation.note4') %>:</strong>
+  <%= @evaluation.note4 %>
+</p>
+
+<p>
+  <strong><%= t('activerecord.attributes.evaluation.student_id') %>:</strong>
+  <%= @evaluation.student.name %>
+</p>
+
+<p>
+  <strong><%= t('activerecord.attributes.evaluation.discipline_id') %>:</strong>
+  <%= @evaluation.discipline.name %>
+</p>
+
+<%= link_to t('activerecord.edit'), edit_evaluation_path(@evaluation) %> |
+<%= link_to t('activerecord.back'), evaluations_path %>

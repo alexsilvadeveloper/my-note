@@ -1,0 +1,34 @@
+pt-BR:
+  activerecord:
+    show: Exibir
+    edit: Editar
+    destroy: Excluir
+    question: Você está certo?
+    back: Voltar
+    discipline:
+      new_discipline: Nova disciplina
+      edit_discipline: Editando disciplina
+    evaluation:
+      new_evaluation: Nova avaliação
+    models:
+      student: Estudante
+      students: Estudantes
+      discipline: Disciplina
+      disciplines: Disciplinas
+      evaluation: Avaliação
+      evaluations: Avaliações
+    attributes:
+      student:
+        name: Nome
+        address: Endereço
+        birthday: Data de nascimento
+      discipline:
+        name: Nome
+      evaluation:
+        student_id: Estudante
+        discipline_id: Disciplina
+        note1: 1ª avaliação
+        note2: 2ª avaliação
+        note3: 3ª avaliação
+        note4: 4ª avaliação
+        average: Média
